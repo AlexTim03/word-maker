@@ -1,10 +1,16 @@
+import { useHistory } from 'react-router-dom'
 import { Button, Stack, Typography } from '@mui/material';
 
 export const Menu = () => {
+
+    const history = useHistory()
+
+    const handleNew = () => history.push('/new')
+
     return (
         <>
             <Stack spacing={3} p={2}>
-                <Button variant="outlined">
+                <Button variant="outlined" onClick={handleNew}>
                     <Typography variant="h6" component="div" p={1}>
                         Новая игра
                     </Typography>

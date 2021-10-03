@@ -19,6 +19,7 @@ const Loader = () => (
 )
 
 const MenuPage = lazy(() => import('../pages/menu/MenuPage'))
+const NewGamePage = lazy(() => import('../pages/newGame/NewGamePage'))
 
 export const Routing = () => (
     <Router>
@@ -26,6 +27,7 @@ export const Routing = () => (
             <Suspense fallback={<Loader />}>
                 <Switch>
                     <Route exact path='/' component={MenuPage} />
+                    <Route exact path='/new' component={NewGamePage} />
                 </Switch>
             </Suspense>
         </Layout>
