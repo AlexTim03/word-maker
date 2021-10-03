@@ -6,6 +6,7 @@ export const Menu = () => {
     const history = useHistory()
 
     const handleNew = () => history.push('/new')
+    const handleRestore = () => history.push('/restore')
 
     return (
         <>
@@ -15,7 +16,7 @@ export const Menu = () => {
                         Новая игра
                     </Typography>
                 </Button>
-                <Button variant="outlined">
+                <Button variant="outlined" onClick={handleRestore}>
                     <Typography variant="h6" component="div" p={1}>
                         Восстановить игру
                     </Typography>
